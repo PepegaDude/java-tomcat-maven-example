@@ -10,6 +10,12 @@ pool:
   name: default
 
 steps:
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '11'
+    jdkArchitecture: 'x64'
+    jdkSourceOption: 'PreInstalled'
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -20,12 +26,6 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '11'
-    jdkArchitecture: 'x64'
-    jdkSourceOption: 'PreInstalled'
 
 - task: PublishBuildArtifacts@1
   inputs:
