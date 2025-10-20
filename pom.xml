@@ -19,17 +19,17 @@
   </dependencies>
 
   <repositories>
-    <repository>
-      <id>amyasin0594</id>
-     .com/amyasin0594/_packaging/amyasin0594/maven/v1</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
+  <repository>
+    <id>amyasin0594</id>
+    <url>https://pkgs.dev.azure.com/amyasin0594/_packaging/amyasin0594/maven/v1</url>
+    <releases>
+      <enabled>true</enabled>
+    </releases>
+    <snapshots>
+      <enabled>true</enabled>
+    </snapshots>
+  </repository>
+</repositories>
 
   <build>
     <finalName>java-tomcat-maven-example</finalName>
